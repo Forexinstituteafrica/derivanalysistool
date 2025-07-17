@@ -1,0 +1,172 @@
+body {
+  background: linear-gradient(to bottom right, #e0f7fa, #e3f2fd);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.login-screen {
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-screen input {
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn.green {
+  background-color: #059669;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.controls {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.tick-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tick {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation: popIn 0.3s ease-in-out;
+}
+
+.tick.highlight {
+  background-color: #facc15;
+  color: #111827;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.circle {
+  width: 220px;
+  height: 220px;
+  background-color: #1d4ed8;
+  color: white;
+  font-size: 7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#timer {
+  font-size: 1.4rem;
+  color: #1d4ed8;
+  margin-top: 1rem;
+  animation: countdownPulse 1s infinite alternate;
+}
+
+@keyframes countdownPulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.popup {
+  background-color: #fbbf24;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: popIn 0.5s ease forwards;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 600px) {
+  .circle {
+    width: 140px;
+    height: 140px;
+    font-size: 4.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}

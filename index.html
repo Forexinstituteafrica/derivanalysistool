@@ -1,0 +1,57 @@
+<!-- HTML SECTION -->
+<div class="login-screen" id="login-screen">
+  <h2>Forex Institute Africa Tool - Access Required</h2>
+  <p>Price: <strong>$100</strong></p>
+  <p>To gain access, purchase using the button below and get login details.</p>
+
+  <a href="https://track.deriv.com/_EhoNcuu_zDRBMfcXPt5VjGNd7ZgqdRLk/1/" target="_blank" class="btn">
+    Open Deriv Account 🔗
+  </a>
+  <br><br>
+  <a href="https://wa.me/qr/5WNCRSJHTYDNO1" target="_blank" class="btn green">
+    📞 Get Logins on WhatsApp
+  </a>
+  <br><br>
+  <input type="text" id="username" placeholder="Username" autocomplete="off">
+  <input type="password" id="password" placeholder="Password" autocomplete="off">
+  <button onclick="validateLogin()" class="btn">Login</button>
+</div>
+
+<div class="container" id="tool" style="display:none;">
+  <h1>Forex Institute Africa - Tick Match Predictor</h1>
+  <a href="https://track.deriv.com/_EhoNcuu_zDRBMfcXPt5VjGNd7ZgqdRLk/1/" target="_blank" class="btn">
+    Open Deriv Account 🔗
+  </a>
+
+  <div class="controls">
+    <label for="market-select">Select Market:</label>
+    <select id="market-select">
+      <option value="R_10">R_10</option>
+      <option value="R_25">R_25</option>
+      <option value="R_50" selected>R_50</option>
+      <option value="R_75">R_75</option>
+      <option value="R_100">R_100</option>
+    </select>
+  </div>
+
+  <div id="tick-history" class="tick-history"></div>
+
+  <div class="circle-container">
+    <div class="circle" id="predicted-digit-display">-</div>
+  </div>
+
+  <h3 id="confidence">Prediction Confidence: <span id="confidence-score">-</span>%</h3>
+  <div id="timer" class="timer">Next prediction in: 10s</div>
+
+  <button id="trade-button" class="btn green" style="display:none; margin: 1rem auto;">Place Trade Now</button>
+
+  <div id="popup" class="popup" style="display:none;">
+    <p>💡 Trade Signal: Conditions met! Confidence ≥ 80%!</p>
+  </div>
+
+  <canvas id="digitChart" style="max-width: 100%; margin-top: 2rem;"></canvas>
+  <canvas id="biasChart" style="max-width: 100%; margin-top: 2rem;"></canvas>
+</div>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
